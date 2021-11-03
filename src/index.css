@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #2f80ed;
+  --secondary-color: #eb5757;
+  --gray-color: #bdbdbd;
+  --gray-color-2: #c0c0c0;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -16,6 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
