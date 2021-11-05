@@ -2,6 +2,7 @@ import React from "react";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import TasksList from "../components/TasksList/TasksList";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Nav />
       <Form />
+      <TasksList />
     </div>
   );
 };
