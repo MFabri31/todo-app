@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Active from "./pages/Active";
 import Completed from "./pages/Completed";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 
 const App = () => {
   return (

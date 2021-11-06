@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Form";
+import Form from "../Form/Form";
 import TasksList from "../TasksList/TasksList";
 
 const Todo = () => {
