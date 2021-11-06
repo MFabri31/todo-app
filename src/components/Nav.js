@@ -1,24 +1,25 @@
 import React from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__item">
-          <a className="nav__link active" href="#">
+          <Link className="nav__link active" to="/">
             All
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="#">
+          <Link className="nav__link" to="/active">
             Active
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="#">
+          <Link className="nav__link" to="/completed">
             Completed
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
