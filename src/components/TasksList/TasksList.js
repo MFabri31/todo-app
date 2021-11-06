@@ -1,16 +1,13 @@
 import React from "react";
+import TaskItem from "../TaskItem/TaskItem";
 import "./TasksList.css";
 
-const TasksList = () => {
+const TasksList = ({ tasks }) => {
   return (
     <ul className="tasks-list">
-      <li className="tasks-list__item">
-        <label className="tasks-list__label">
-          Do coding challenges
-          <input type="checkbox" className="tasks-list__input" />
-          <span className="checkmark"></span>
-        </label>
-      </li>
+      {tasks.map((elem) => (
+        <TaskItem id={elem.id} elem={elem} />
+      ))}
     </ul>
   );
 };
