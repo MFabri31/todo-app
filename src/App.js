@@ -5,6 +5,7 @@ import Active from "./pages/Active";
 import Completed from "./pages/Completed";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
+import { TasksProvider } from "./context/TasksContext/TasksContext";
 
 const App = () => {
   return (
@@ -13,9 +14,11 @@ const App = () => {
         <Header />
         <Nav />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/active" component={Active} />
-          <Route path="/completed" component={Completed} />
+          <TasksProvider>
+            <Route exact path="/" component={Home} />
+            <Route path="/active" component={Active} />
+            <Route path="/completed" component={Completed} />
+          </TasksProvider>
         </Switch>
       </Router>
     </div>

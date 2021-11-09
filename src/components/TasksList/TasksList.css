@@ -1,6 +1,7 @@
 .tasks-list {
   margin-top: 2rem;
   padding: 0;
+  position: relative;
 }
 
 .tasks-list__item {
@@ -77,4 +78,22 @@
 
 .line-through {
   text-decoration: line-through;
+}
+
+.btn-delete {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 13rem;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .btn-delete {
+    cursor: pointer;
+  }
 }

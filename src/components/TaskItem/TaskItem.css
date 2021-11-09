@@ -1,0 +1,15 @@
+.tasks-list__item {
+  position: relative;
+}
+
+.tasks-list__icon {
+  position: absolute;
+  right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .tasks-list__icon {
+    right: 13rem;
+    cursor: pointer;
+  }
+}

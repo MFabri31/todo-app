@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import TasksContext from "../../context/TasksContext/TasksContext";
 import "./Form.css";
 
 let initialForm = {
@@ -6,8 +7,9 @@ let initialForm = {
   task: "",
 };
 
-const Form = ({ addTask }) => {
+const Form = () => {
   const [form, setForm] = useState(initialForm);
+  const { addTask } = useContext(TasksContext);
 
   const { task } = form;
 

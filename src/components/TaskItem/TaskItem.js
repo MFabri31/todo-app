@@ -1,4 +1,6 @@
 import React from "react";
+import TrashIcon from "../../assets/icons/trash-icon.png";
+import "./TaskItem.css";
 
 const TaskItem = ({ elem }) => {
   return (
@@ -8,6 +10,7 @@ const TaskItem = ({ elem }) => {
         <input type="checkbox" className="tasks-list__input" />
         <span className="checkmark"></span>
       </label>
+      <img className="tasks-list__icon" src={TrashIcon} alt="trash-icon" />
     </li>
   );
 };
