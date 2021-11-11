@@ -6,7 +6,7 @@ import "./TasksList.css";
 import TrashIcon from "../../assets/icons/trash-icon.png";
 
 const TasksList = () => {
-  const { tasks } = useContext(TasksContext);
+  const { tasks, deleteTask } = useContext(TasksContext);
 
   let location = useLocation();
 
@@ -14,7 +14,12 @@ const TasksList = () => {
     <>
       <ul className="tasks-list">
         {tasks.map((elem) => (
-          <TaskItem id={elem.id} elem={elem} />
+          <TaskItem
+            id={elem.id}
+            elem={elem}
+            location={location}
+            deleteTask={deleteTask}
+          />
         ))}
         {location.pathname === "/completed" && tasks.length !== 0 ? (
           <button className="btn-delete">

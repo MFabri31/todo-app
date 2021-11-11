@@ -10,7 +10,12 @@ const TasksProvider = ({ children }) => {
     setTasks([...tasks, data]);
   };
 
-  const data = { tasks, addTask };
+  const deleteTask = (id) => {
+    const newTasks = tasks.filter((elem) => elem.id !== id);
+    setTasks(newTasks);
+  };
+
+  const data = { tasks, addTask, deleteTask };
 
   return <TasksContext.Provider value={data}>{children}</TasksContext.Provider>;
 };
