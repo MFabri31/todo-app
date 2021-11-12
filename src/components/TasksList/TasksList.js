@@ -15,7 +15,7 @@ const TasksList = () => {
       <ul className="tasks-list">
         {tasks.map((elem) => (
           <TaskItem
-            id={elem.id}
+            key={elem.id}
             elem={elem}
             location={location}
             deleteTask={deleteTask}

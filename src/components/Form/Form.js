@@ -32,14 +32,14 @@ const Form = () => {
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__field">
         <input
-          class="form__input"
+          className="form__input"
           type="text"
           placeholder="add details"
           name="task"
           value={task}
           onChange={handleChange}
         />
-        <button class="form__btn">Add</button>
+        <button className="form__btn">Add</button>
       </div>
     </form>
   );
