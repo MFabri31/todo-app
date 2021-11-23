@@ -23,7 +23,8 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    addTask(form);
+    if (task.trim() === "") return;
+    else addTask(form);
 
     setForm(initialForm);
   };
