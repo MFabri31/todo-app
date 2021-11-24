@@ -1,8 +1,8 @@
 import React from "react";
-import TasksList from "../components/TasksList/TasksList";
+import Todo from "../components/Todo/Todo";
 
 const Completed = () => {
-  return <TasksList />;
+  return <Todo />;
 };
 
 export default Completed;

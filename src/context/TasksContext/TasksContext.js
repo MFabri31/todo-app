@@ -15,7 +15,21 @@ const TasksProvider = ({ children }) => {
     setTasks(newTasks);
   };
 
-  const data = { tasks, addTask, deleteTask };
+  const handleCompleted = (id) => {
+    const updateTasks = tasks.map((elem) => {
+      if (elem.id === id) elem.completed = !elem.completed;
+      return elem;
+    });
+
+    setTasks(updateTasks);
+  };
+
+  const deleteAll = () => {
+    const newTasks = tasks.filter((elem) => elem.completed === false);
+    setTasks(newTasks);
+  };
+
+  const data = { tasks, addTask, deleteTask, handleCompleted, deleteAll };
 
   return <TasksContext.Provider value={data}>{children}</TasksContext.Provider>;
 };

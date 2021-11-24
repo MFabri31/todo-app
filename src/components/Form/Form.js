@@ -2,9 +2,10 @@ import React, { useState, useContext } from "react";
 import TasksContext from "../../context/TasksContext/TasksContext";
 import "./Form.css";
 
-let initialForm = {
-  id: "",
+const initialForm = {
+  id: null,
   task: "",
+  completed: false,
 };
 
 const Form = () => {

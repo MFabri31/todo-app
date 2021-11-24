@@ -7,6 +7,10 @@
   right: 1rem;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 @media screen and (min-width: 768px) {
   .tasks-list__icon {
     right: 13rem;
